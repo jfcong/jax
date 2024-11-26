@@ -1987,3 +1987,20 @@ gpu_use_magma = enum_state(
         'to use this feature.'
     ),
 )
+
+exec_time_optimization_effort = float_state(
+    name='jax_exec_time_optimization_effort',
+    default=0.0,
+    help=('Effort for execution time optimization, as a value between -1.0 and 1.0. '
+          'Values closer to -1.0 prioritize memory usage over execution speed, '
+          'while values closer to 1.0 do the opposite. 0.0 is the default.'),
+)
+
+memory_fitting_effort = float_state(
+    name='jax_memory_fitting_effort',
+    default=0.0,
+    help=('Effort for memory usage optimization, as a value between -1.0 and 1.0. '
+          'Values closer to -1.0 prioritize execution speed over memory usage, '
+          'while values closer to 1.0 do the opposite. 0.0 is the default.'),
+)
+

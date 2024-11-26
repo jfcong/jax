@@ -12,6 +12,13 @@ When releasing, please add the new-release-boilerplate to docs/pallas/CHANGELOG.
 
 ## jax 0.4.36
 
+### New Features
+
+* Allow specifying `exec_time_optimization_effort` and `memory_fitting_effort` via CLI using environment variables `JAX_EXEC_TIME_OPTIMIZATION_EFFORT` and `JAX_MEMORY_FITTING_EFFORT` respectively. (gh #15856)
+
+
+## jax 0.4.35 (Oct 22, 2024)
+
 * Breaking Changes
   * This release lands "stackless", an internal change to JAX's tracing
     machinery. We made trace dispatch purely a function of context rather than a

@@ -182,6 +182,10 @@ def get_compile_options(
       msg = 'device_assignment does not match num_partitions: {} vs {}.'
       raise ValueError(msg.format(device_assignment, num_partitions))
 
+  build_options.exec_time_optimization_effort = config.exec_time_optimization_effort.value
+  build_options.memory_fitting_effort = config.memory_fitting_effort.value
+
+
     if device_assignment.dtype == object:
       device_assignment = np.vectorize(lambda d: d.id, otypes=[int])(
           device_assignment)
